@@ -28,7 +28,6 @@ STFT频谱图 → CNN处理 → LSTM融合 → 特征拼接 → 全连接层分�
 ```
 
 #### 2. **模型架构差异**
-![模型对比图](https://via.placeholder.com/600x200?text=Model+Architecture+Comparison)
 
 - **论文模型**：  
   - **双 Transformer 分支**：分别处理 ECG 信号和频谱图。  
@@ -44,7 +43,7 @@ STFT频谱图 → CNN处理 → LSTM融合 → 特征拼接 → 全连接层分�
 | **特征提取器** | Transformer（全局依赖建模） | CNN（局部特征） + LSTM（时序依赖）    |
 | **融合方式**   | 神经模糊规则（自适应加权）  | 特征拼接（无权重学习）                |
 | **分类器**     | 模糊推理系统（可解释规则）  | Dense + Softmax（黑盒决策）           |
-| **频谱生成**   | 仅依赖 STFT                 | STFT + 小波变换（未充分利用小波特征） |
+| **频谱生成**   | 仅依赖 STFT                 | STFT + 小波变换 |
 
 #### 4. **性能与复杂度**
 ```plaintext
